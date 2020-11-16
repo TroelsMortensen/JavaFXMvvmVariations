@@ -6,9 +6,30 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="views.update.UpdateController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="104.0" prefWidth="209.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.update.UpdateController">
+    <children>
+        <VBox layoutX="-1.0" layoutY="2.0" prefHeight="88.0" prefWidth="210.0">
+            <children>
+                <HBox prefHeight="44.0" prefWidth="210.0">
+                    <children>
+                        <Label text="User Id" />
+                        <TextField fx:id="userIdField" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Body" />
+                        <TextField fx:id="bodyField" />
+                    </children>
+                </HBox>
+                <Label fx:id="validationLabel" />
+                <HBox>
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onUpdate" text="Update" />
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onBack" text="Back" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
 </AnchorPane>

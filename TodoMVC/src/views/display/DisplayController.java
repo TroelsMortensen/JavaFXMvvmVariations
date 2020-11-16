@@ -29,18 +29,15 @@ public class DisplayController implements ViewController {
         setupTable();
         userIdSearchField.textProperty().bindBidirectional(vm.userIdSearchProperty());
         isCompletedDropDown.getSelectionModel().selectedItemProperty().
-                addListener((observableValue, oldValue, newValue) -> {
-                    vm.setSearchByCompleted(newValue);
-                });
+                addListener((observableValue, oldValue, newValue) ->
+                        vm.setSearchByCompleted(newValue));
     }
 
     private void setupTable() {
         table.setItems(vm.getTodos());
         table.getSelectionModel().selectedItemProperty().
                 addListener((observableValue, oldValue, newValue) ->
-        {
-            vm.setSelected(newValue);
-        });
+                        vm.setSelected(newValue));
 
         todoIdColumn.setCellValueFactory(new PropertyValueFactory<>("todoId"));
         userIdColumn.setCellValueFactory(new PropertyValueFactory<>("userId"));
@@ -76,7 +73,9 @@ public class DisplayController implements ViewController {
     }
 
     public void onUpdate() {
-        vh.openView("update");
+        Todo selectedTodo = vm.getSelectedTodo();
+        if(selectedTodo != null)
+            vh.openView("update", selectedTodo);
     }
 
     public void onSearch() {

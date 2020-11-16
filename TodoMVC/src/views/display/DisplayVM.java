@@ -69,4 +69,8 @@ public class DisplayVM {
             searchByIsCompleted = null;
         }
     }
+
+    public Todo getSelectedTodo() {
+        return selectedTodo;
+    }
 }
