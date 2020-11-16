@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.display.DisplayController">
+   <children>
+      <HBox prefHeight="34.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="userIdSearchField" promptText="User id" />
+            <ComboBox fx:id="isCompletedDropDown" prefWidth="150.0" />
+            <Button mnemonicParsing="false" onAction="#onSearch" text="Search" />
+         </children>
+      </HBox>
+      <TableView fx:id="table" layoutY="34.0" prefHeight="325.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="todoIdColumn" prefWidth="75.0" text="Todo ID" />
+          <TableColumn fx:id="userIdColumn" prefWidth="75.0" text="User ID" />
+          <TableColumn fx:id="bodyColumn" prefWidth="400.0" text="Body" />
+          <TableColumn fx:id="doneColumn" prefWidth="50.0" text="Done?" />
+        </columns>
+      </TableView>
+      <HBox layoutX="7.0" layoutY="368.0">
+         <children>
+            <Button layoutX="7.0" layoutY="368.0" mnemonicParsing="false" onAction="#onAdd" text="Add" />
+            <Button mnemonicParsing="false" onAction="#onDelete" text="Delete" />
+            <Button mnemonicParsing="false" onAction="#onUpdate" text="Update" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

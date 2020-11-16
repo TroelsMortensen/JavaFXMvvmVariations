@@ -1,4 +1,4 @@
-package model;
+package models;
 
 public class Todo {
     private int userId;
@@ -42,5 +42,15 @@ public class Todo {
 
     public void setTodoId(int id) {
         todoId = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Todo{" +
+                "userId=" + userId +
+                ", todoId=" + todoId +
+                ", isCompleted=" + isCompleted +
+                ", body='" + body + '\'' +
+                '}';
     }
 }

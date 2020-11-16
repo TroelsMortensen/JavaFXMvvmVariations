@@ -1,6 +1,6 @@
-package service;
+package services;
 
-import model.Todo;
+import models.Todo;
 
 import java.util.ArrayList;
 import java.util.List;
